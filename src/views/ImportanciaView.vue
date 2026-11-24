@@ -261,12 +261,18 @@ const hasViewportTag = ref(true);
 }
 
 .mode-virtual-980 {
-  /* Simula a página de 980px encolhida na tela de 300px (escala ~0.3) */
-  transform: scale(0.35);
+  /* Simula a página de 980px encolhida na tela mobile */
+  transform: scale(0.24);
   transform-origin: top left;
   width: 860px;
   height: 1100px;
   font-size: 16px;
+}
+
+@media (min-width: 30rem) {
+  .mode-virtual-980 {
+    transform: scale(0.35);
+  }
 }
 
 .dummy-nav {

@@ -200,8 +200,7 @@ const formulaText = computed(() => {
   color: var(--color-text);
   font-weight: 500;
   line-height: 1.3;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 </style>

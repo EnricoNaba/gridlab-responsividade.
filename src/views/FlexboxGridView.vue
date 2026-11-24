@@ -151,16 +151,26 @@ gap: 1rem;</code></pre>
 .tech-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: var(--text-sm);
+  font-size: var(--text-xs);
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
 }
 
 .tech-table th, .tech-table td {
-  padding: var(--space-sm) var(--space-md);
+  padding: var(--space-xs) var(--space-sm);
   border: 1px solid var(--color-border);
   text-align: left;
+  overflow-wrap: break-word;
+}
+
+@media (min-width: 48rem) {
+  .tech-table {
+    font-size: var(--text-sm);
+  }
+  .tech-table th, .tech-table td {
+    padding: var(--space-sm) var(--space-md);
+  }
 }
 
 .tech-table th {
