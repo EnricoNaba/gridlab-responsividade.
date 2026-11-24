@@ -1,0 +1,121 @@
+/* src/assets/tokens.css */
+:root {
+  /* Paleta "Caderno de Engenharia" // GridLab */
+  --color-bg: #f4f3ef;
+  --color-surface: #ffffff;
+  --color-surface-muted: #e4e4e7;
+  --color-text: #18181b;
+  --color-text-muted: #52525b;
+  --color-border: #d4d4d8;
+  --color-border-dark: #a1a1aa;
+  --color-accent: #ea580c;
+  --color-accent-hover: #c2410c;
+  --color-accent-subtle: #fff7ed;
+  --color-success: #059669;
+  --color-success-bg: #ecfdf5;
+  --color-danger: #dc2626;
+  --color-danger-bg: #fef2f2;
+  --color-code-bg: #18181b;
+  --color-code-text: #f4f4f5;
+
+  /* Espaçamentos padronizados em rem */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2.5rem;
+
+  /* Tipografia técnica */
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', Consolas, 'Courier New', monospace;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.75rem;
+  --text-2xl: 2.25rem;
+
+  /* Formas e layout */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.75rem;
+  --container-max: 68rem;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  overflow-x: hidden; /* Impede rolagem horizontal no celular */
+}
+
+/* Fundo sutil de caderno técnico / blueprint */
+body {
+  background-image: 
+    linear-gradient(to right, rgba(212, 212, 216, 0.25) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(212, 212, 216, 0.25) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Mobile-First: estilo base sem media query é para celular */
+.container {
+  width: 100%;
+  padding-inline: var(--space-md);
+  margin-inline: auto;
+}
+
+/* Breakpoint Desktop usando min-width exclusivamente */
+@media (min-width: 48rem) {
+  /* 768px */
+  .container {
+    max-width: var(--container-max);
+    padding-inline: var(--space-xl);
+  }
+}
+
+/* Utilitários Globais */
+code, pre {
+  font-family: var(--font-mono);
+}
+
+pre {
+  background: var(--color-code-bg);
+  color: var(--color-code-text);
+  padding: var(--space-md);
+  border-radius: var(--radius-sm);
+  overflow-x: auto;
+  max-width: 100%;
+  font-size: var(--text-xs);
+  line-height: 1.5;
+  border: 1px solid var(--color-border);
+}
+
+@media (min-width: 48rem) {
+  pre {
+    font-size: var(--text-sm);
+  }
+}
+
+p code, li code {
+  background: #e4e4e7;
+  color: var(--color-accent);
+  padding: 0.15rem 0.35rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.9em;
+  overflow-wrap: anywhere;
+}
+
+button {
+  font-family: inherit;
+}

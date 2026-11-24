@@ -1,0 +1,24 @@
+# Secrets & Environment Variables
+.env
+.env.*
+*.env
+
+# Local development & VCS
+.git
+.gitignore
+.vscode
+.idea
+
+# Dependencies & Build artifacts
+node_modules
+dist
+dist-ssr
+coverage
+
+# Cache & Logs
+.vercel
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+.eslintcache
